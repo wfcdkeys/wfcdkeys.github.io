@@ -1,20 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN" data-theme="light">
+<html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="一个关于创意、代码与持续探索的个人空间。">
-  <meta name="theme-color" content="#f4f1e9">
-  <title>wfcdkeys · 个人主页</title>
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2319231d'/%3E%3Cpath d='M18 45V19h9l10 15 10-15h9v26h-9V31L32 49 27 31v14z' fill='%23c7f36b'/%3E%3C/svg%3E">
-  <script>
-    document.documentElement.classList.add('js');
-    try {
-      const savedTheme = localStorage.getItem('portfolio-theme');
-      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-      document.documentElement.dataset.theme = savedTheme || preferredTheme;
-    } catch {}
-  </script>
+  <meta name="description" content="CE ARCHIVE：收集、整理并分享 Cheat Engine 制作的 CT 作弊表与单机作弊器。">
+  <meta name="theme-color" content="#080b0c">
+  <title>CE ARCHIVE · CT 表与作弊器</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='12' fill='%23c8ff3d'/%3E%3Cpath d='M17 18h13c12 0 17 5 17 14S42 46 30 46H17zm9 7v14h4c6 0 8-2 8-7s-2-7-8-7z' fill='%23080b0c'/%3E%3C/svg%3E">
+  <script>document.documentElement.classList.add('js');</script>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -22,215 +15,325 @@
 
   <header class="site-header">
     <div class="container header-inner">
-      <a class="brand" href="#home" aria-label="返回首页">
-        <span class="brand-mark" aria-hidden="true">P</span>
-        <span class="brand-text">个人主页</span>
+      <a class="brand" href="#home" aria-label="CE ARCHIVE 首页">
+        <span class="brand-mark">CE</span>
+        <span class="brand-name">ARCHIVE<span class="brand-cursor">_</span></span>
       </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#resources" class="active">资源库</a>
+        <a href="#guide">使用指南</a>
+        <a href="#standards">发布规范</a>
+        <a href="#about">关于</a>
+      </nav>
+
+      <div class="header-status" aria-label="档案站在线">
+        <span class="status-dot" aria-hidden="true"></span>
+        ARCHIVE ONLINE
+      </div>
 
       <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="site-nav" aria-expanded="false">
         <span></span>
         <span></span>
-      </button>
-
-      <nav class="site-nav" id="site-nav" aria-label="主导航">
-        <a href="#home" class="active">首页</a>
-        <a href="#about">关于</a>
-        <a href="#projects">作品</a>
-        <a href="#skills">技能</a>
-        <a href="#contact">联系</a>
-      </nav>
-
-      <button class="theme-toggle" type="button" aria-label="切换到深色模式">
-        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <circle cx="12" cy="12" r="4"></circle>
-          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
-        </svg>
-        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-          <path d="M20.6 15.2A9 9 0 0 1 8.8 3.4 9 9 0 1 0 20.6 15.2Z"></path>
-        </svg>
       </button>
     </div>
   </header>
 
   <main id="main">
     <section class="hero" id="home">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
       <div class="container hero-grid">
         <div class="hero-copy">
-          <p class="eyebrow reveal">
-            <span class="status-dot" aria-hidden="true"></span>
-            欢迎来到我的数字空间
-          </p>
-          <h1 class="reveal">把想法，<br><span class="accent-text">变成作品。</span></h1>
-          <p class="hero-description reveal">一名热爱设计与开发的创作者。这里记录我的项目、技能，以及每一次认真探索的过程。</p>
+          <p class="eyebrow reveal"><span class="bracket">[</span> CHEAT ENGINE RESOURCE ARCHIVE <span class="bracket">]</span></p>
+          <h1 class="reveal">CT 表与<br><span class="accent-text">作弊器档案。</span></h1>
+          <p class="hero-description reveal">收集、整理并分享 Cheat Engine 制作的 CT 作弊表与单机作弊器。文件、版本、说明与使用边界，一站查清。</p>
           <div class="hero-actions reveal">
-            <a class="button button-primary" href="#projects">
-              查看我的作品
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
-                <path d="M5 12h14M13 6l6 6-6 6"></path>
-              </svg>
+            <a class="button button-primary" href="#resources">
+              进入资源库
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
             </a>
-            <a class="button button-secondary" href="#contact">聊聊合作</a>
+            <a class="button button-secondary" href="#standards">查看发布规范</a>
           </div>
-          <div class="hero-meta reveal" aria-label="网站技术栈">
-            <span>HTML</span>
-            <span>CSS</span>
-            <span>JavaScript</span>
+          <div class="hero-notice reveal">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M12 3 4 6v6c0 5 3.4 8.2 8 9 4.6-.8 8-4 8-9V6l-8-3Z"></path><path d="m8.5 12 2.2 2.2 4.8-5"></path></svg>
+            仅限单机游戏与明确授权的研究环境
           </div>
         </div>
 
-        <div class="hero-visual reveal" aria-label="代码窗口装饰">
-          <div class="visual-glow" aria-hidden="true"></div>
-          <div class="code-window">
-            <div class="window-bar">
-              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
-              <span>portfolio.js</span>
-              <span class="window-status">●</span>
-            </div>
-            <pre><code><span class="code-muted">01</span>  <span class="code-purple">const</span> developer = {
-<span class="code-muted">02</span>    name: <span class="code-green">'wfcdkeys'</span>,
-<span class="code-muted">03</span>    role: <span class="code-green">'Creator'</span>,
-<span class="code-muted">04</span>    skills: [
-<span class="code-muted">05</span>      <span class="code-green">'HTML'</span>, <span class="code-green">'CSS'</span>,
-<span class="code-muted">06</span>      <span class="code-green">'JavaScript'</span>
-<span class="code-muted">07</span>    ],
-<span class="code-muted">08</span>    curious: <span class="code-orange">true</span>,
-<span class="code-muted">09</span>    available: <span class="code-orange">true</span>
-<span class="code-muted">10</span>  };
-<span class="code-muted">11</span>
-<span class="code-muted">12</span>  <span class="code-purple">function</span> <span class="code-blue">create</span>(idea) {
-<span class="code-muted">13</span>    <span class="code-purple">return</span> idea
-<span class="code-muted">14</span>      .map(build)
-<span class="code-muted">15</span>      .filter(polish);
-<span class="code-muted">16</span>  }</code></pre>
+        <div class="hero-terminal reveal" aria-label="资源档案终端示意">
+          <div class="terminal-bar">
+            <div class="terminal-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+            <span>archive_manifest.log</span>
+            <span class="terminal-live">LIVE</span>
           </div>
-          <div class="floating-card floating-card-top">
-            <span class="mini-icon" aria-hidden="true">↗</span>
-            <div><strong>持续学习</strong><span>Learning every day</span></div>
+          <div class="terminal-body">
+            <p><span class="prompt">&gt;</span> scan ./resources</p>
+            <p class="terminal-dim">indexing local archive...</p>
+            <p><span class="terminal-ok">[OK]</span> ct_table_module</p>
+            <p><span class="terminal-ok">[OK]</span> trainer_module</p>
+            <p><span class="terminal-ok">[OK]</span> documentation</p>
+            <div class="terminal-rule"></div>
+            <p><span class="prompt">&gt;</span> latest_file</p>
+            <p class="terminal-file"><span class="file-badge">.CT</span> ce-table-template.ct</p>
+            <p class="terminal-dim">status: ready_to_download</p>
+            <p><span class="prompt">&gt;</span> archive_status</p>
+            <p class="terminal-final">SYSTEM READY<span class="terminal-cursor">_</span></p>
           </div>
-          <div class="floating-card floating-card-bottom">
-            <span class="pulse-dot" aria-hidden="true"></span>
-            <div><strong>开放合作</strong><span>Let's build together</span></div>
-          </div>
+          <div class="terminal-stamp" aria-hidden="true">CE<br>ARCHIVE</div>
         </div>
       </div>
 
-      <div class="container hero-bottom reveal">
-        <span>向下滚动，了解更多</span>
-        <a href="#about" aria-label="前往关于部分">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
-            <path d="M12 4v16M6 14l6 6 6-6"></path>
-          </svg>
-        </a>
+      <div class="ticker" aria-label="资源类型">
+        <div class="ticker-track">
+          <span>CT TABLES</span><i>✦</i><span>TRAINERS</span><i>✦</i><span>VERSION LOGS</span><i>✦</i><span>OFFLINE FIRST</span><i>✦</i><span>SHA-256 READY</span><i>✦</i>
+          <span>CT TABLES</span><i>✦</i><span>TRAINERS</span><i>✦</i><span>VERSION LOGS</span><i>✦</i><span>OFFLINE FIRST</span><i>✦</i><span>SHA-256 READY</span><i>✦</i>
+        </div>
+      </div>
+    </section>
+
+    <section class="section resources-section" id="resources">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <p class="section-kicker"><span>01</span> RESOURCE LIBRARY</p>
+            <h2>资源库<span class="accent-dot">.</span></h2>
+          </div>
+          <p>按类型筛选，或直接搜索资源名称、编号与标签。</p>
+        </div>
+
+        <div class="resource-toolbar reveal">
+          <div class="filter-group" role="group" aria-label="按资源类型筛选">
+            <button class="filter-button active" type="button" data-filter="all" aria-pressed="true">全部 <span>04</span></button>
+            <button class="filter-button" type="button" data-filter="table" aria-pressed="false">CT 表 <span>01</span></button>
+            <button class="filter-button" type="button" data-filter="trainer" aria-pressed="false">作弊器 <span>02</span></button>
+            <button class="filter-button" type="button" data-filter="guide" aria-pressed="false">指南 <span>01</span></button>
+          </div>
+          <label class="search-box">
+            <span class="sr-only">搜索资源</span>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg>
+            <input id="resource-search" type="search" placeholder="搜索资源..." autocomplete="off">
+            <kbd>/</kbd>
+          </label>
+        </div>
+
+        <p class="result-count" id="result-count" aria-live="polite">显示 4 个资源</p>
+
+        <div class="resource-grid" id="resource-grid">
+          <article class="resource-card reveal" data-type="table" data-search="ct 表 模板 template cheatengine ce-table-template">
+            <div class="resource-card-top">
+              <span class="resource-id">CT-0001</span>
+              <span class="status-badge status-ready"><span></span>可下载</span>
+            </div>
+            <div class="resource-preview preview-table">
+              <div class="file-sheet">
+                <span class="file-extension">.CT</span>
+                <span class="file-lines"><i></i><i></i><i></i><i></i></span>
+              </div>
+              <span class="preview-label">CHEAT TABLE</span>
+            </div>
+            <div class="resource-card-body">
+              <p class="resource-type">CT 作弊表 / 模板</p>
+              <h3>CT 表结构模板</h3>
+              <p class="resource-description">标准 Cheat Engine 表结构，适合作为新资源的起点。当前文件不包含任何作弊条目。</p>
+              <dl class="resource-meta">
+                <div><dt>格式</dt><dd>.CT</dd></div>
+                <div><dt>版本</dt><dd>v1.0</dd></div>
+                <div><dt>更新</dt><dd>2026.11</dd></div>
+              </dl>
+              <div class="hash-line"><span>SHA-256</span><code title="4d42ce21dfb65c4988d36a6521ef19813ca194aac98960756446d7ca063483df">4d42ce21dfb65c49…</code></div>
+            </div>
+            <div class="resource-card-footer">
+              <a class="download-button" href="downloads/ce-table-template.ct" download>
+                下载 CT 模板
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12M7 10l5 5 5-5M5 21h14"></path></svg>
+              </a>
+              <span class="file-size">XML · 113 B</span>
+            </div>
+          </article>
+
+          <article class="resource-card reveal" data-type="trainer" data-search="作弊器 trainer tr-0001 发布位 01 exe">
+            <div class="resource-card-top">
+              <span class="resource-id">TR-0001</span>
+              <span class="status-badge status-pending"><span></span>待发布</span>
+            </div>
+            <div class="resource-preview preview-trainer">
+              <div class="trainer-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3h6v3h3v4h2v10h-2v1H6v-1H4V10h2V6h3V3Z"></path><path d="M8 12h8M8 16h3M15 16h1"></path></svg>
+                <span>.EXE</span>
+              </div>
+              <span class="preview-label">TRAINER RELEASE SLOT</span>
+            </div>
+            <div class="resource-card-body">
+              <p class="resource-type">作弊器 / 发布位</p>
+              <h3>作弊器发布位 01</h3>
+              <p class="resource-description">预留给你的第一款作弊器。补齐游戏、版本、功能列表与校验值后即可发布。</p>
+              <dl class="resource-meta">
+                <div><dt>格式</dt><dd>.EXE</dd></div>
+                <div><dt>版本</dt><dd>--</dd></div>
+                <div><dt>状态</dt><dd>等待文件</dd></div>
+              </dl>
+            </div>
+            <div class="resource-card-footer">
+              <button class="download-button" type="button" disabled>等待发布</button>
+              <span class="file-size">NO FILE</span>
+            </div>
+          </article>
+
+          <article class="resource-card reveal" data-type="trainer" data-search="作弊器 trainer tr-0002 发布位 02 exe">
+            <div class="resource-card-top">
+              <span class="resource-id">TR-0002</span>
+              <span class="status-badge status-pending"><span></span>待发布</span>
+            </div>
+            <div class="resource-preview preview-trainer preview-trainer-alt">
+              <div class="trainer-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M9 3h6v3h3v4h2v10h-2v1H6v-1H4V10h2V6h3V3Z"></path><path d="M8 12h8M8 16h3M15 16h1"></path></svg>
+                <span>.EXE</span>
+              </div>
+              <span class="preview-label">TRAINER RELEASE SLOT</span>
+            </div>
+            <div class="resource-card-body">
+              <p class="resource-type">作弊器 / 发布位</p>
+              <h3>作弊器发布位 02</h3>
+              <p class="resource-description">第二个资源发布位。可放置不同游戏或不同构建版本的作弊器。</p>
+              <dl class="resource-meta">
+                <div><dt>格式</dt><dd>.EXE</dd></div>
+                <div><dt>版本</dt><dd>--</dd></div>
+                <div><dt>状态</dt><dd>等待文件</dd></div>
+              </dl>
+            </div>
+            <div class="resource-card-footer">
+              <button class="download-button" type="button" disabled>等待发布</button>
+              <span class="file-size">NO FILE</span>
+            </div>
+          </article>
+
+          <article class="resource-card reveal" data-type="guide" data-search="指南 guide 使用 cheat engine doc-0001">
+            <div class="resource-card-top">
+              <span class="resource-id">DOC-0001</span>
+              <span class="status-badge status-guide"><span></span>阅读</span>
+            </div>
+            <div class="resource-preview preview-guide">
+              <div class="guide-icon">
+                <span>?</span>
+                <i></i><i></i><i></i>
+              </div>
+              <span class="preview-label">QUICK START GUIDE</span>
+            </div>
+            <div class="resource-card-body">
+              <p class="resource-type">指南 / 入门</p>
+              <h3>CT 表使用指南</h3>
+              <p class="resource-description">从文件校验、存档备份到打开 CT 表与启用条目，快速了解基本流程。</p>
+              <dl class="resource-meta">
+                <div><dt>格式</dt><dd>HTML</dd></div>
+                <div><dt>语言</dt><dd>中文</dd></div>
+                <div><dt>更新</dt><dd>2026.11</dd></div>
+              </dl>
+            </div>
+            <div class="resource-card-footer">
+              <a class="download-button" href="#guide">
+                查看指南
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg>
+              </a>
+              <span class="file-size">4 STEPS</span>
+            </div>
+          </article>
+        </div>
+
+        <div class="empty-state" id="empty-state" hidden>
+          <span class="empty-code">404_RESOURCE</span>
+          <h3>没有找到匹配的资源</h3>
+          <p>试试其他关键词，或切换到“全部”。</p>
+          <button class="button button-secondary" id="reset-filters" type="button">重置筛选</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section guide-section" id="guide">
+      <div class="container guide-grid">
+        <div class="guide-intro reveal">
+          <p class="section-kicker"><span>02</span> QUICK START</p>
+          <h2>从下载到启用，<br>保持简单。</h2>
+          <p>以下流程适用于你信任且仅用于单机或授权环境的 CT 表。不同游戏与 CE 版本可能略有差异。</p>
+          <a class="text-link" href="https://www.cheatengine.org/" target="_blank" rel="noopener noreferrer">
+            前往 Cheat Engine 官方站点 <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <ol class="steps-list">
+          <li class="step reveal">
+            <span class="step-number">01</span>
+            <div><h3>下载并核对文件</h3><p>确认资源编号、适用版本与来源。若发布者提供 SHA-256，请先比对校验值。</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">02</span>
+            <div><h3>备份游戏存档</h3><p>复制或导出存档，避免测试过程中出现不可恢复的进度变化。</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">03</span>
+            <div><h3>打开 CT 表</h3><p>在 Cheat Engine 中选择对应的单机游戏进程，再打开下载的 .CT 文件。</p></div>
+          </li>
+          <li class="step reveal">
+            <span class="step-number">04</span>
+            <div><h3>按需启用条目</h3><p>从需要的条目开始，逐项激活并观察变化。不要在在线竞技或未授权环境使用。</p></div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section standards-section" id="standards">
+      <div class="container">
+        <div class="standards-grid">
+          <div class="standards-copy reveal">
+            <p class="section-kicker"><span>03</span> RELEASE STANDARD</p>
+            <h2>发布之前，<br>先对齐这些信息。</h2>
+            <p>一个可追溯的资源，比一个只有下载按钮的文件更有价值。</p>
+          </div>
+
+          <div class="checklist reveal">
+            <div class="checklist-item"><span>01</span><div><h3>明确适用范围</h3><p>游戏名称、版本、语言、运行平台与单机/授权环境。</p></div></div>
+            <div class="checklist-item"><span>02</span><div><h3>写清版本信息</h3><p>资源版本、更新时间、已知问题与功能变更记录。</p></div></div>
+            <div class="checklist-item"><span>03</span><div><h3>提供校验值</h3><p>发布 SHA-256，让下载者能够确认文件是否一致。</p></div></div>
+            <div class="checklist-item"><span>04</span><div><h3>拒绝恶意内容</h3><p>不托管恶意软件、账号工具、窃密程序或反作弊绕过内容。</p></div></div>
+          </div>
+        </div>
+
+        <aside class="safety-panel reveal" aria-label="安全提示">
+          <div class="safety-icon" aria-hidden="true">!</div>
+          <div>
+            <h3>安全提示</h3>
+            <p>作弊器可能被杀毒软件误报，也可能带来真实风险。请核对来源与校验值，必要时在隔离虚拟机中测试；不要为了运行文件而关闭全部安全防护。</p>
+          </div>
+          <span class="safety-code">RISK_NOTICE</span>
+        </aside>
       </div>
     </section>
 
     <section class="section about-section" id="about">
-      <div class="container">
-        <div class="section-label reveal"><span>01</span> 关于我</div>
-        <div class="about-grid">
-          <h2 class="reveal">保持好奇，<br>认真创造。</h2>
-          <div class="about-copy reveal">
-            <p>我相信，好的作品来自清晰的想法、简洁的设计和不断打磨的细节。喜欢把复杂的问题拆解开来，再用直观、友好的方式重新组合。</p>
-            <p>这个网站是我的线上名片，也是持续更新的作品档案。你可以在这里了解我在做什么，以及我如何思考与创造。</p>
-            <div class="about-facts">
-              <div><span>当前关注</span><strong>Web 与交互体验</strong></div>
-              <div><span>做事方式</span><strong>简洁、务实、注重细节</strong></div>
-            </div>
-          </div>
+      <div class="container about-grid">
+        <div class="about-label reveal">
+          <p class="section-kicker"><span>04</span> ABOUT THE ARCHIVE</p>
+          <div class="about-symbol" aria-hidden="true">CE<span>//</span></div>
+        </div>
+        <div class="about-copy reveal">
+          <h2>一个开放、清晰的<br>CE 资源档案。</h2>
+          <p>这里面向 Cheat Engine 爱好者与单机游戏研究者，集中整理 CT 作弊表、作弊器与使用资料。目标是让资源可追溯、版本清晰、下载透明。</p>
+          <div class="about-tags"><span>单机优先</span><span>版本可追溯</span><span>文件透明</span><span>持续整理</span></div>
         </div>
       </div>
     </section>
 
-    <section class="section projects-section" id="projects">
-      <div class="container">
-        <div class="section-heading reveal">
-          <div>
-            <div class="section-label"><span>02</span> 精选作品</div>
-            <h2>一些最近的<br>探索与实践。</h2>
-          </div>
-          <p>从一个小想法开始，<br>把每一步变成看得见的成果。</p>
-        </div>
-
-        <div class="project-grid">
-          <article class="project-card project-featured reveal">
-            <div class="project-visual visual-portfolio" aria-hidden="true">
-              <div class="mock-browser">
-                <div class="mock-browser-bar"><span></span><span></span><span></span></div>
-                <div class="mock-browser-content">
-                  <span class="mock-kicker">HELLO, WORLD</span>
-                  <strong> ideas.<br>code.<br><em>create.</em></strong>
-                  <div class="mock-button"></div>
-                </div>
-              </div>
-              <span class="visual-caption">PERSONAL SPACE / 2026</span>
-            </div>
-            <div class="project-body">
-              <div class="project-topline"><span>个人网站</span><span class="project-arrow" aria-hidden="true">↗</span></div>
-              <h3>一个干净、轻快的线上名片</h3>
-              <p>用 HTML、CSS 与 JavaScript 构建的响应式个人主页，支持深浅色主题与移动端浏览。</p>
-              <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-visual visual-experiment" aria-hidden="true">
-              <span class="experiment-number">02</span>
-              <div class="experiment-orbit"></div>
-              <span class="experiment-label">WEB EXPERIMENT</span>
-            </div>
-            <div class="project-body">
-              <div class="project-topline"><span>项目 02</span><span class="project-arrow" aria-hidden="true">↗</span></div>
-              <h3>你的项目名称</h3>
-              <p>用一两句话介绍项目背景、你负责的内容，以及它最终带来的价值。</p>
-              <div class="tag-list"><span>项目标签</span><span>技术栈</span></div>
-            </div>
-          </article>
-
-          <article class="project-card reveal">
-            <div class="project-visual visual-system" aria-hidden="true">
-              <div class="system-grid"><span></span><span></span><span></span><span></span></div>
-              <span class="system-label">DESIGN SYSTEM</span>
-            </div>
-            <div class="project-body">
-              <div class="project-topline"><span>项目 03</span><span class="project-arrow" aria-hidden="true">↗</span></div>
-              <h3>你的另一个作品</h3>
-              <p>可以是一项实验、一次设计，或一个正在持续迭代的小产品。</p>
-              <div class="tag-list"><span>设计</span><span>开发</span></div>
-            </div>
-          </article>
-        </div>
-      </div>
-    </section>
-
-    <section class="section skills-section" id="skills">
-      <div class="container skills-grid">
-        <div class="skills-intro reveal">
-          <div class="section-label"><span>03</span> 技术工具箱</div>
-          <h2>工具会变，<br>解决问题的好奇心不变。</h2>
-        </div>
-        <div class="skills-content reveal">
-          <p>以下是一些我正在使用和探索的技术，你可以按自己的真实情况进行删减。</p>
-          <div class="skill-list">
-            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>GitHub</span><span>Figma</span><span>响应式设计</span><span>交互设计</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="section contact-section" id="contact">
+    <section class="contact-section" id="contact">
       <div class="container">
         <div class="contact-panel reveal">
-          <div class="contact-orbit" aria-hidden="true"></div>
+          <div class="contact-grid" aria-hidden="true"></div>
           <div class="contact-copy">
-            <div class="section-label"><span>04</span> 联系我</div>
-            <h2>有个想法？<br><span>一起把它做好。</span></h2>
-            <p>无论是一个新项目、一次合作，还是单纯想交流，都欢迎通过 GitHub 找到我。</p>
+            <p class="section-kicker"><span>05</span> CONTRIBUTE</p>
+            <h2>有新的 CT 表<br>或作弊器？</h2>
+            <p>通过 GitHub 联系我，附上资源信息、适用版本与校验值。</p>
           </div>
           <a class="button contact-button" href="https://github.com/wfcdkeys" target="_blank" rel="noopener noreferrer">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-              <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.97 10.97 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.39-5.28 5.68.42.36.79 1.06.79 2.14v3.26c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7Z"></path>
-            </svg>
-            在 GitHub 上联系我
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.97 10.97 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.39-5.28 5.68.42.36.79 1.06.79 2.14v3.26c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7Z"></path></svg>
+            通过 GitHub 提交
             <span aria-hidden="true">↗</span>
           </a>
         </div>
@@ -239,13 +342,18 @@
   </main>
 
   <footer class="site-footer">
-    <div class="container footer-inner">
-      <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">P</span><span>保持创造。</span></a>
-      <p>© <span id="current-year">2026</span> · 用代码与好奇心构建</p>
-      <a href="#home" class="back-to-top">回到顶部 <span aria-hidden="true">↑</span></a>
+    <div class="container footer-top">
+      <a class="brand" href="#home"><span class="brand-mark">CE</span><span class="brand-name">ARCHIVE<span class="brand-cursor">_</span></span></a>
+      <p>CT 表 · 作弊器 · 使用资料</p>
+      <a class="back-to-top" href="#home">回到顶部 <span aria-hidden="true">↑</span></a>
+    </div>
+    <div class="container footer-bottom">
+      <p>© <span id="current-year">2026</span> CE ARCHIVE. 仅限单机与授权研究使用。</p>
+      <p>NO MALWARE / NO ANTI-CHEAT BYPASS</p>
     </div>
   </footer>
 
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
   <script src="script.js" defer></script>
 </body>
 </html>
