@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="一个关于创意、代码与持续探索的个人空间。">
+  <meta name="theme-color" content="#f4f1e9">
+  <title>wfcdkeys · 个人主页</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%2319231d'/%3E%3Cpath d='M18 45V19h9l10 15 10-15h9v26h-9V31L32 49 27 31v14z' fill='%23c7f36b'/%3E%3C/svg%3E">
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      const preferredTheme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      document.documentElement.dataset.theme = savedTheme || preferredTheme;
+    } catch {}
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">跳到主要内容</a>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#home" aria-label="返回首页">
+        <span class="brand-mark" aria-hidden="true">P</span>
+        <span class="brand-text">个人主页</span>
+      </a>
+
+      <button class="menu-toggle" type="button" aria-label="打开导航菜单" aria-controls="site-nav" aria-expanded="false">
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="主导航">
+        <a href="#home" class="active">首页</a>
+        <a href="#about">关于</a>
+        <a href="#projects">作品</a>
+        <a href="#skills">技能</a>
+        <a href="#contact">联系</a>
+      </nav>
+
+      <button class="theme-toggle" type="button" aria-label="切换到深色模式">
+        <svg class="icon-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <circle cx="12" cy="12" r="4"></circle>
+          <path d="M12 2v2M12 20v2M4.93 4.93l1.42 1.42M17.65 17.65l1.42 1.42M2 12h2M20 12h2M4.93 19.07l1.42-1.42M17.65 6.35l1.42-1.42"></path>
+        </svg>
+        <svg class="icon-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+          <path d="M20.6 15.2A9 9 0 0 1 8.8 3.4 9 9 0 1 0 20.6 15.2Z"></path>
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <span class="status-dot" aria-hidden="true"></span>
+            欢迎来到我的数字空间
+          </p>
+          <h1 class="reveal">把想法，<br><span class="accent-text">变成作品。</span></h1>
+          <p class="hero-description reveal">一名热爱设计与开发的创作者。这里记录我的项目、技能，以及每一次认真探索的过程。</p>
+          <div class="hero-actions reveal">
+            <a class="button button-primary" href="#projects">
+              查看我的作品
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6"></path>
+              </svg>
+            </a>
+            <a class="button button-secondary" href="#contact">聊聊合作</a>
+          </div>
+          <div class="hero-meta reveal" aria-label="网站技术栈">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+          </div>
+        </div>
+
+        <div class="hero-visual reveal" aria-label="代码窗口装饰">
+          <div class="visual-glow" aria-hidden="true"></div>
+          <div class="code-window">
+            <div class="window-bar">
+              <div class="window-dots" aria-hidden="true"><span></span><span></span><span></span></div>
+              <span>portfolio.js</span>
+              <span class="window-status">●</span>
+            </div>
+            <pre><code><span class="code-muted">01</span>  <span class="code-purple">const</span> developer = {
+<span class="code-muted">02</span>    name: <span class="code-green">'wfcdkeys'</span>,
+<span class="code-muted">03</span>    role: <span class="code-green">'Creator'</span>,
+<span class="code-muted">04</span>    skills: [
+<span class="code-muted">05</span>      <span class="code-green">'HTML'</span>, <span class="code-green">'CSS'</span>,
+<span class="code-muted">06</span>      <span class="code-green">'JavaScript'</span>
+<span class="code-muted">07</span>    ],
+<span class="code-muted">08</span>    curious: <span class="code-orange">true</span>,
+<span class="code-muted">09</span>    available: <span class="code-orange">true</span>
+<span class="code-muted">10</span>  };
+<span class="code-muted">11</span>
+<span class="code-muted">12</span>  <span class="code-purple">function</span> <span class="code-blue">create</span>(idea) {
+<span class="code-muted">13</span>    <span class="code-purple">return</span> idea
+<span class="code-muted">14</span>      .map(build)
+<span class="code-muted">15</span>      .filter(polish);
+<span class="code-muted">16</span>  }</code></pre>
+          </div>
+          <div class="floating-card floating-card-top">
+            <span class="mini-icon" aria-hidden="true">↗</span>
+            <div><strong>持续学习</strong><span>Learning every day</span></div>
+          </div>
+          <div class="floating-card floating-card-bottom">
+            <span class="pulse-dot" aria-hidden="true"></span>
+            <div><strong>开放合作</strong><span>Let's build together</span></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="container hero-bottom reveal">
+        <span>向下滚动，了解更多</span>
+        <a href="#about" aria-label="前往关于部分">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true">
+            <path d="M12 4v16M6 14l6 6 6-6"></path>
+          </svg>
+        </a>
+      </div>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-label reveal"><span>01</span> 关于我</div>
+        <div class="about-grid">
+          <h2 class="reveal">保持好奇，<br>认真创造。</h2>
+          <div class="about-copy reveal">
+            <p>我相信，好的作品来自清晰的想法、简洁的设计和不断打磨的细节。喜欢把复杂的问题拆解开来，再用直观、友好的方式重新组合。</p>
+            <p>这个网站是我的线上名片，也是持续更新的作品档案。你可以在这里了解我在做什么，以及我如何思考与创造。</p>
+            <div class="about-facts">
+              <div><span>当前关注</span><strong>Web 与交互体验</strong></div>
+              <div><span>做事方式</span><strong>简洁、务实、注重细节</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <div class="section-label"><span>02</span> 精选作品</div>
+            <h2>一些最近的<br>探索与实践。</h2>
+          </div>
+          <p>从一个小想法开始，<br>把每一步变成看得见的成果。</p>
+        </div>
+
+        <div class="project-grid">
+          <article class="project-card project-featured reveal">
+            <div class="project-visual visual-portfolio" aria-hidden="true">
+              <div class="mock-browser">
+                <div class="mock-browser-bar"><span></span><span></span><span></span></div>
+                <div class="mock-browser-content">
+                  <span class="mock-kicker">HELLO, WORLD</span>
+                  <strong> ideas.<br>code.<br><em>create.</em></strong>
+                  <div class="mock-button"></div>
+                </div>
+              </div>
+              <span class="visual-caption">PERSONAL SPACE / 2026</span>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>个人网站</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>一个干净、轻快的线上名片</h3>
+              <p>用 HTML、CSS 与 JavaScript 构建的响应式个人主页，支持深浅色主题与移动端浏览。</p>
+              <div class="tag-list"><span>HTML</span><span>CSS</span><span>JavaScript</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-experiment" aria-hidden="true">
+              <span class="experiment-number">02</span>
+              <div class="experiment-orbit"></div>
+              <span class="experiment-label">WEB EXPERIMENT</span>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>项目 02</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>你的项目名称</h3>
+              <p>用一两句话介绍项目背景、你负责的内容，以及它最终带来的价值。</p>
+              <div class="tag-list"><span>项目标签</span><span>技术栈</span></div>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-visual visual-system" aria-hidden="true">
+              <div class="system-grid"><span></span><span></span><span></span><span></span></div>
+              <span class="system-label">DESIGN SYSTEM</span>
+            </div>
+            <div class="project-body">
+              <div class="project-topline"><span>项目 03</span><span class="project-arrow" aria-hidden="true">↗</span></div>
+              <h3>你的另一个作品</h3>
+              <p>可以是一项实验、一次设计，或一个正在持续迭代的小产品。</p>
+              <div class="tag-list"><span>设计</span><span>开发</span></div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+      <div class="container skills-grid">
+        <div class="skills-intro reveal">
+          <div class="section-label"><span>03</span> 技术工具箱</div>
+          <h2>工具会变，<br>解决问题的好奇心不变。</h2>
+        </div>
+        <div class="skills-content reveal">
+          <p>以下是一些我正在使用和探索的技术，你可以按自己的真实情况进行删减。</p>
+          <div class="skill-list">
+            <span>HTML5</span><span>CSS3</span><span>JavaScript</span><span>Git</span><span>GitHub</span><span>Figma</span><span>响应式设计</span><span>交互设计</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-panel reveal">
+          <div class="contact-orbit" aria-hidden="true"></div>
+          <div class="contact-copy">
+            <div class="section-label"><span>04</span> 联系我</div>
+            <h2>有个想法？<br><span>一起把它做好。</span></h2>
+            <p>无论是一个新项目、一次合作，还是单纯想交流，都欢迎通过 GitHub 找到我。</p>
+          </div>
+          <a class="button contact-button" href="https://github.com/wfcdkeys" target="_blank" rel="noopener noreferrer">
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M12 .7a11.5 11.5 0 0 0-3.64 22.41c.58.11.79-.25.79-.56v-2.23c-3.22.7-3.9-1.37-3.9-1.37-.52-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.57-.29-5.27-1.29-5.27-5.69 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.16 1.18a10.97 10.97 0 0 1 5.76 0c2.2-1.49 3.16-1.18 3.16-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.7 5.39-5.28 5.68.42.36.79 1.06.79 2.14v3.26c0 .31.21.68.8.56A11.5 11.5 0 0 0 12 .7Z"></path>
+            </svg>
+            在 GitHub 上联系我
+            <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand footer-brand" href="#home"><span class="brand-mark" aria-hidden="true">P</span><span>保持创造。</span></a>
+      <p>© <span id="current-year">2026</span> · 用代码与好奇心构建</p>
+      <a href="#home" class="back-to-top">回到顶部 <span aria-hidden="true">↑</span></a>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
